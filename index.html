@@ -763,6 +763,9 @@
 		    google.load("jqueryui", "1.8.16", {uncompressed:false});
 		</script>
 		<script type="text/javascript">
+	       	$(function() {
+	        	$( "#accordion" ).accordion();
+	        });
 		    gh.authenticate('oscarcp', 'bbc19617c6c096ccffbecccb7f070083');
 		    var cidadania = gh.user('cidadania');
 		    
@@ -807,16 +810,22 @@
                 border-radius: 10px;
 		    }
 		    
-		    #repositories {
+		    #content {
+		        width: 960px;
 		        margin: auto;
-		        width: 90%;
+		        margin-top: 50px;
+		    }
+		    
+		    #repositories {
+		        float: left;
+		        width: 600px;
 		    }
 		    
 		    .ghrepo {
-		        width: 300px;
+		        width: 350px;
 		        background: #DDD;
 		        float: left;
-		        padding: 10px;
+		        padding: 20px;
 		        margin: 20px;
    		        -webkit-border-radius: 10px;
                 -moz-border-radius: 10px;
@@ -835,6 +844,11 @@
 		    #sidebar {
 		        float: right;
 		        width: 300px;
+		        background: #DDD;
+		        padding: 20px;
+   		        -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
 		    }
 		</style>
 	</head>
@@ -850,9 +864,16 @@
     <div id="content">
         <div id="repositories">
         </div>
+        <div id="sidebar">
+            <div id="accordion">
+                <h3><a href="#">¿Por qúe en inglés?</a></h3>
+                <div>Cidadania defiende el uso del gallego y del español, pero debido a la proyección internacional del código de cidadania, y el hecho de que GitHub sea exclusivamente en inglés, hemos optado por crear esta página en inglés. Si tienes cualquier duda puedes preguntarnos en cidadania [at] cidadania [dot] coop</div>
+                <h3><a href="#">What is Cidadania?</a></h3>
+                <div>Cidadania is a cooperative company located in Galicia, Spain. We do a lot of social participation work.</div>
+                <h3><a href="#">What is this page?</a></h3>
+                <div>This page is a resumé of the cidadania repositories hosted at GitHub. All of our projects are open source, usually GPL.</div>
+        </div>
     </div>
-    
-    <div id="sidebar">
     </div>
     
  
