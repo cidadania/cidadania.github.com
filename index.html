@@ -781,27 +781,38 @@
             });
 		</script>
 		<style type="text/css">
+		    @font-face{ 
+                font-family: "SansationRegular";
+                src: url('http://fontsforweb.com/public/fonts/424/SansationRegular.eot');
+                src: local("Sansation"), url('http://fontsforweb.com/public/fonts/424/SansationRegular.ttf') format("truetype");
+            }
+            
+            .fontsforweb_fontid_424 {
+                font-family: "SansationRegular";
+            }
+            
 		    body {
-		        background: rgb(186, 212, 5);
-		        font-family: sans;
-		        font-size: 12px;
+		        background: #FFF;/*rgb(186, 212, 5);*/
+		        font-family: SansationRegular;
+		        font-size: 14px;
 		        
 		    }
 		    
 		    a {
 		        text-decoration: none;
-		        color: #777;
-		    }
-		    
-		    a:hover {
 		        color: #222;
 		    }
 		    
+		    a:hover {
+		        color: #777;
+		    }
+		    
 		    #header {
-		        width: 600px;
-		        height: 90px;
+		        width: 730px;
+		        height: 122px;
+		        line-height: 45px;
 		        padding: 20px;
-		        background: #000;
+		        background: #222;
 		        color: #FFF;
 		        margin: auto;
 		        text-align: center;
@@ -810,15 +821,28 @@
                 border-radius: 10px;
 		    }
 		    
+		    .logo {
+		        float: left;
+		        margin-left: 10px;
+		    }
+		    
+		    .title {
+		        margin-top: -50px;
+		    }
+		    
 		    #content {
-		        width: 960px;
+		        width: 800px;
 		        margin: auto;
 		        margin-top: 50px;
 		    }
 		    
+		    .description {
+		        font-family: sans;
+		    }
+		    
 		    #repositories {
 		        float: left;
-		        width: 600px;
+		        width: 400px;
 		    }
 		    
 		    .ghrepo {
@@ -846,9 +870,17 @@
 		        width: 300px;
 		        background: #DDD;
 		        padding: 20px;
+		        margin: 20px;
+		        text-align: justify;
    		        -webkit-border-radius: 10px;
                 -moz-border-radius: 10px;
                 border-radius: 10px;
+		    }
+		    
+		    #accordion h3 {
+		        font-weight: bold;
+		        padding: 5px;
+		        background: #EEE;
 		    }
 		</style>
 	</head>
@@ -856,8 +888,8 @@
 	<body>
     
     <div id="header">
-        <h1>Cidadania Sociedade Cooperativa Galega<br />
-            Cidadania Cooperative
+        <h1><img src="http://i134.photobucket.com/albums/q119/pizte/301-90.jpg" class="logo" />
+        Cidadania Sociedade Cooperativa Galega<br />Cidadania Co-operative
         </h1>
     </div>
     
@@ -866,12 +898,13 @@
         </div>
         <div id="sidebar">
             <div id="accordion">
-                <h3><a href="#">¿Por qúe en inglés?</a></h3>
-                <div>Cidadania defiende el uso del gallego y del español, pero debido a la proyección internacional del código de cidadania, y el hecho de que GitHub sea exclusivamente en inglés, hemos optado por crear esta página en inglés. Si tienes cualquier duda puedes preguntarnos en cidadania [at] cidadania [dot] coop</div>
                 <h3><a href="#">What is Cidadania?</a></h3>
-                <div>Cidadania is a cooperative company located in Galicia, Spain. We do a lot of social participation work.</div>
+                <div class="description">Cidadania is a galician co-operative formed by professionals of social sciences. If something distinguishes Cidadania from other professional teams is its orientation to social research and intervention and its innovative nature and promotion of participative citizenship in public politics.<br /><br />
+Founded in 1999, most of the Cidadania activities are developed in the community and public areas, resulting in the fact that our main clients are public administrations, socieoeconomic initiatives, NGOs, asociative sector, social movements...<br/><br/>Cidadania is located in Santiago de Compostela, Spain.</div>
                 <h3><a href="#">What is this page?</a></h3>
-                <div>This page is a resumé of the cidadania repositories hosted at GitHub. All of our projects are open source, usually GPL.</div>
+                <div class="description">This page is a little resumé of the cidadania code repositories hosted at GitHub. All of our projects are open source, usually GPL. Feel free to copy, modify, help or redistribute our code.</div>
+                <h3><a href="#">Contact</a></h3>
+                <div class="description">You can contact with us at cidadania@cidadania.coop either in english, spanish or galician (preferred).</div>
         </div>
     </div>
     </div>
