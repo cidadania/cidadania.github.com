@@ -1,4 +1,4 @@
-// ## Client-side Javascript API wrapper for GitHub
+		// ## Client-side Javascript API wrapper for GitHub
 //
 // Tries to map one-to-one with the GitHub API V2, but in a Javascripty manner.
 
@@ -282,6 +282,10 @@
             return this;
         }
     );
+    
+    gh.user.prototype.members = function (callback, context) {
+        jsonp("organizations/cidadania/public_members", callback, context);
+    };
 
     // Search users for `query`.
     gh.user.search = function (query, callback, context) {

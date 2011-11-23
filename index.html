@@ -16,9 +16,6 @@
 		    google.load("jqueryui", "1.8.16", {uncompressed:false});
 		</script>
 		<script type="text/javascript">
-	       	$(function() {
-	        	$( "#accordion" ).accordion();
-	        });
 		    gh.authenticate('oscarcp', 'bbc19617c6c096ccffbecccb7f070083');
 		    var cidadania = gh.user('cidadania');
 		    
@@ -30,6 +27,12 @@
 	                $('#' + data.repositories[i].name).append("<p>" + data.repositories[i].description + "</p>");
   	                $('#repositories').append("</div>");
 	            }
+            });
+            
+            cidadania.members(function (data) {
+                for(var i = 0; i < data.users.length; i++) {
+                    $('#members').append("<li>" + data.users[i].name + "</li>");
+                }
             });
 		</script>
 		<style type="text/css">
@@ -74,14 +77,23 @@
                         <h3><a href="/">cidadania</a></h3>
                         <ul class="nav">
                             <li class="active"><a href="#">Home</a></li>
-                        
                         </ul>
                     </div>
                 </div><!-- /topbar-inner -->
             </div>
             
             <div class="row" style="margin-top:70px;">
-                <div class="span16">
+                <div class="span4">
+                    <div class="well">
+                        <h2>Links</h2>
+                        <ul class="unstyled">
+                            <li><a href="http://github.com/cidadania">GitHub</a></li>
+                            <li><a href="http://cidadania.coop">Cidadania website</a></li>
+                            <li><a href="mailto:cidadania@cidadania.coop">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="span12">
                     <h1>Welcome to Cidadania Open Source Labs</h1>
                     <p>Here is where we store all our open source projects so everyone can enjoy them using the tools provided by GitHub. We also have another repos, but this is the easiest to use for everyone.</p>
                     <p>Enjoy your stay, and if you are interested in a project, feel free to download it, clone the repo, modify anything and redistribute it!. Also, if you have made some patches on your own we would like
@@ -117,6 +129,10 @@
                         <ul>
                             <li>e-cidadania</li>
                         </ul>
+                        <h2>Members</h2>
+                        <ul id="members">
+                        </ul>
+                        
                     </div>
                 </div>
             </div>
