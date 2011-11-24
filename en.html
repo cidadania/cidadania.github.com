@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es-ES" xml:lang="es-ES">
 	<head>
-		<title>Página GitHub de Cidadania</title>
+		<title>Cidadania GitHub Page</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<meta name="Description" content="Site description"/>
 		<meta name="Robots" content="all"/>
@@ -22,7 +22,7 @@
 		    cidadania.repos(function (data) {
 	            for(var i = 0; i < data.repositories.length; i++) {
 	                $('#repositories').append("<div id='" + data.repositories[i].name + "' style='margin:0 0 40px 0;'>");
-	                $('#' + data.repositories[i].name).append("<h2><a href='" + data.repositories[i].url + "'>" + data.repositories[i].name + "</a> <span class='watchers'>Seguidores: " + data.repositories[i].watchers + " | Forks: " + data.repositories[i].forks + "</span></h2>");
+	                $('#' + data.repositories[i].name).append("<h2><a href='" + data.repositories[i].url + "'>" + data.repositories[i].name + "</a> <span class='watchers'>Watchers: " + data.repositories[i].watchers + " | Forks: " + data.repositories[i].forks + "</span></h2>");
   	                $('#' + data.repositories[i].name).append("<hr style='margin:5px 0 5px 0;' />");
 	                $('#' + data.repositories[i].name).append("<p>" + data.repositories[i].description + "</p>");
   	                $('#repositories').append("</div>");
@@ -39,7 +39,7 @@
                 var language = document.selectors.language.value;
                 
                 if (language == "") {
-                    alert("No has seleccionado idioma.");
+                    alert("You didn't select language.");
                 } else {
                     window.location = '/' + language + '.html'
                 }
@@ -86,15 +86,15 @@
                     <div class="container">
                         <h3><a href="/">cidadania</a></h3>
                         <ul class="nav">
-                            <li class="active"><a href="#">Inicio</a></li>
+                            <li class="active"><a href="#">Home</a></li>
                         </ul>
        	                <ul class="nav secondary-nav">
        	                    <form name="selectors" action="" class="pull-left">
                                 <select class="small" id="language" onchange="doRedirect()">
-                                    <option value="">Idioma
+                                    <option value="">Language
                                     <option value="es">Español
-                                    <option value="en">Inglés
-                                    <option value="gl">Gallego
+                                    <option value="en">English
+                                    <option value="gl">Galego
                                 </select>
                             </form>
     	                </ul>
@@ -105,24 +105,21 @@
             <div class="row" style="margin-top:70px;">
                 <div class="span4">
                     <div class="well">
-                        <h2>Enlaces</h2>
+                        <h2>Links</h2>
                         <ul class="unstyled">
-                            <li><a href="http://github.com/cidadania">Perfil GitHub</a></li>
-                            <li><a href="http://cidadania.coop">Página web</a></li>
+                            <li><a href="http://github.com/cidadania">GitHub Page</a></li>
+                            <li><a href="http://cidadania.coop">Website</a></li>
                             <li><a href="http://www.facebook.com/cidadania.coop">Facebook</a></li>
                             <li><a href="https://plus.google.com/b/103749527906168363347/">Google Plus</a></li>                            
-                            <li><a href="mailto:cidadania@cidadania.coop">Contacto</a></li>
+                            <li><a href="mailto:cidadania@cidadania.coop">Contact</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="span12">
-                    <h1>Bienvenido al laboratorio de software libre de Cidadania</h1>
-                    <p>Aquí es donde almacenamos todos nuestros proyectos de software libre y código abierto para que
-                       todo el mundo pueda disfrutarlos utilizando las herramientas que da GitHub. También disponemos
-                       de otros repositorios, pero este es el más sencillo de utilizar para todo el mundo.</p>
-                    <p>Disfruta de tu estancia, y si te interesa algún proyecto, eres libre de descargártelo, clonar
-                       el repositorio, modificar cualquier cosa y redistribuirlo. Además, si has hecho algún parche
-                       por tu cuenta nos gustaría verlo, cada contribución es para la comunidad.</p>
+                    <h1>Welcome to Cidadania Open Source Labs</h1>
+                    <p>Here is where we store all our open source projects so everyone can enjoy them using the tools provided by GitHub. We also have another repos, but this is the easiest to use for everyone.</p>
+                    <p>Enjoy your stay, and if you are interested in a project, feel free to download it, clone the repo, modify anything and redistribute it!. Also, if you have made some patches on your own we would like
+                    to see them, every contribution if for the community.</p>
                 </div>
             </div>
             
@@ -130,20 +127,13 @@
             
             <div class="row">
                 <div class="span8">
-                    <h2>Qué es esta página?</h2>
-                    <p>Esta página web es el sitio principal de nuestro repositorio de GitHub, donde almacenamos todos
-                       nuestros proyectos de software libre y código abierto. Aquí puedes encontrar una lista de los
-                       proyectos y otros enlaces.</p>
+                    <h2>What is this page?</h2>
+                    <p>This webpage is the main site of our GitHub repository, where we host all out open source projects. Here you can find the project index and some other links.</p>
                 </div>
                 <div class="span8">
-                    <h2>Qué es Cidadania?</h2>
-                    <p>Cidadania es una empresa cooperativa formada por profesionales de las ciencias sociales. Si algo
-                       la diferencia de otros equipos profesionales es su orientación a la utilidad social de las investigaciones
-                       e intervenciones, y su carácter innovador de promoción de la participación ciudadana en el diseño de
-                       políticas públicas.</p>
-                    <p>Fundada en 1999, las acciones preferentes de Cidadania vienen desarrollándose en la dimensión comunitaria
-                       y pública de la realidad social, resultando nuestros principales clientes las Administracines Públicas,
-                       iniciativas de economía social, ONGs, sector asociativo, movimientos sociales...</p>
+                    <h2>What is Cidadania?</h2>
+                    <p>Cidadania is a cooperative company formed by professionals of the social sciences with orientation to the social usefulness of the investigations and interventions. Innovative character in the area of the civil participation and the participative democracies.</p>
+                    <p>Founded in 1999, more than ten years of Cidadania it is employed at the community and public dimension: public administration, social economy, associative sector, social movements...</p>
                 </div>
             </div>
             
@@ -151,17 +141,17 @@
             
             <div class="row">
                 <div class="span10">
-                    <h2>Proyectos</h2>
+                    <h2>Projects</h2>
                     <div id="repositories">
                     </div>
                 </div>
                 <div class="span6">
                     <div class="well">
-                        <h2>Proyectos destacados</h2>
+                        <h2>Highlighted projects</h2>
                         <ul>
                             <li><a href="http://ecidadania.org">e-cidadania</a></li>
                         </ul>
-                        <h2>Miembros</h2>
+                        <h2>Members</h2>
                         <ul id="members">
                         </ul>
                         
