@@ -31,7 +31,7 @@
             
             cidadania.members(function (data) {
                 for(var i = 0; i < data.users.length; i++) {
-                    $('#members').append("<li>" + data.users[i].name + "</li>");
+                    $('#members').append("<li><a href='http://github.com/" + data.users[i].login + "'>" + data.users[i].name + "</a></li>");
                 }
             });
 		</script>
@@ -87,8 +87,10 @@
                     <div class="well">
                         <h2>Links</h2>
                         <ul class="unstyled">
-                            <li><a href="http://github.com/cidadania">GitHub</a></li>
-                            <li><a href="http://cidadania.coop">Cidadania website</a></li>
+                            <li><a href="http://github.com/cidadania">GitHub Page</a></li>
+                            <li><a href="http://cidadania.coop">Website</a></li>
+                            <li><a href="http://www.facebook.com/cidadania.coop">Facebook</a></li>
+                            <li><a href="https://plus.google.com/b/103749527906168363347/">Google Plus</a></li>                            
                             <li><a href="mailto:cidadania@cidadania.coop">Contact</a></li>
                         </ul>
                     </div>
@@ -127,7 +129,7 @@
                     <div class="well">
                         <h2>Highlighted projects</h2>
                         <ul>
-                            <li>e-cidadania</li>
+                            <li><a href="http://ecidadania.org">e-cidadania</a></li>
                         </ul>
                         <h2>Members</h2>
                         <ul id="members">
